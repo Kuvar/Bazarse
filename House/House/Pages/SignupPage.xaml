@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<helpers:GradientContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:House.Helpers;assembly=House"
+             x:Class="House.Pages.SignupPage" Title="Sign Up" StartColor="#b6eae1" EndColor="#D2FBAD">
+    <ScrollView>
+        <RelativeLayout x:Name="Relativelayout">
+            <StackLayout Padding="15,40,15,30" Spacing="30" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}" >
+                <Label HorizontalOptions="CenterAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Sign Up" FontSize="50" ForegroundColor="#FFFFFF" FontAttributes="Bold"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="0,20,0,0" Spacing="20">
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Frame Padding="7,7,7,2" OutlineColor="Transparent" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                            <Image Source="user.png"/>
+                            <Entry Text="{Binding Name}" Placeholder="Name" TextColor="#5E33FF" HorizontalOptions="FillAndExpand"  />
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Frame Padding="7,7,7,2" OutlineColor="Transparent" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                            <Image Source="mail.png"/>
+                            <Entry Text="{Binding Email}" Placeholder="Email" Keyboard="Email" TextColor="#5E33FF" HorizontalOptions="FillAndExpand"/>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Frame Padding="7,7,7,2" OutlineColor="Transparent" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                            <Image Source="mobile.png"/>
+                            <Entry Text="{Binding Mobile}" Placeholder="Mobile" TextColor="#5E33FF" HorizontalOptions="FillAndExpand"/>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Frame Padding="7,7,7,2" OutlineColor="Transparent" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                            <Image Source="key.png"/>
+                            <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True" TextColor="#5E33FF" HorizontalOptions="FillAndExpand"/>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="Sign up" Command="{Binding SignUpCommand}" TextColor="White" BorderRadius="10" FontSize="18" FontAttributes="Bold"  HeightRequest="55" BackgroundColor="#5E33FF"   />
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="0">
+                        <Label Text="Already have an account? " TextColor="White" FontSize="16" HeightRequest="40" VerticalTextAlignment="Center"/>
+                        <Button Text="Login Now" TextColor="#5E33FF"  FontSize="15" HeightRequest="40" Command="{Binding GoToLoginCommand}" BackgroundColor="Transparent"  />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </RelativeLayout>
+    </ScrollView>
+</helpers:GradientContentPage>
